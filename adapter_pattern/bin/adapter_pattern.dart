@@ -1,11 +1,29 @@
-import 'package:adapter_pattern/mapper/news_mapper.dart';
-import 'package:adapter_pattern/models/news_articel_model.dart';
+// Target interface
+abstract class MediaPlayer {
+  void play(String audioType, String fileName);
+}
 
+// Adaptee class
+class VLCPlayer {
+  void playVLC(String fileName) {
+    print("Playing VLC file: $fileName");
+  }
+}
+
+// Adapter class
+class VLCPlayerAdapter implements MediaPlayer {
+  VLCPlayer vlcPlayer;
+  VLCPlayerAdapter(this.vlcPlayer);
+  @override
+  void play(String audioType, String fileName) {
+    if (audioType.toLowerCase() == "vlc") {
+      vlcPlayer.playVLC(fileName);
+    }
+  }
+}
+
+// Client code
 void main() {
-  final newsArticleModel =
-      NewsArticleModel(title: 'title', date: '15/3/2020', imgUrl: null);
-
-  final newsArticleEntity = newsArticleModel.toDomain();
-
-  print(newsArticleEntity.imgUrl);
+  MediaPlayer mediaPlayer = VLCPlayerAdapter(VLCPlayer());
+  mediaPlayer.play("VLC", "song.vlc");
 }
