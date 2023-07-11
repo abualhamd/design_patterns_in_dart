@@ -9,7 +9,7 @@
 
 ## Structural
 - [x] Adapter
-- [ ] Decorator
+- [x] Decorator
 - [ ] Composite
 - [ ] Facade
 
