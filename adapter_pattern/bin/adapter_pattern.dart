@@ -1,29 +1,33 @@
-// Target interface
-abstract class MediaPlayer {
-  void play(String audioType, String fileName);
+enum AudioType {
+  vlc,
+  blabla,
 }
 
-// Adaptee class
+abstract class MediaPlayer {
+  void play(AudioType audioType, String fileName);
+}
+
 class VLCPlayer {
   void playVLC(String fileName) {
     print("Playing VLC file: $fileName");
   }
 }
 
-// Adapter class
-class VLCPlayerAdapter implements MediaPlayer {
-  VLCPlayer vlcPlayer;
-  VLCPlayerAdapter(this.vlcPlayer);
+class VLCAdapter implements MediaPlayer {
+  final VLCPlayer _vlcPlayer;
+
+  VLCAdapter({required VLCPlayer vlcPlayer}) : _vlcPlayer = vlcPlayer;
   @override
-  void play(String audioType, String fileName) {
-    if (audioType.toLowerCase() == "vlc") {
-      vlcPlayer.playVLC(fileName);
+  void play(AudioType audioType, String fileName) {
+    if (audioType == AudioType.vlc) {
+      _vlcPlayer.playVLC(fileName);
+    } else {
+      print("Invalid audio type");
     }
   }
 }
 
-// Client code
 void main() {
-  MediaPlayer mediaPlayer = VLCPlayerAdapter(VLCPlayer());
-  mediaPlayer.play("VLC", "song.vlc");
+  MediaPlayer mediaPlayer = VLCAdapter(vlcPlayer: VLCPlayer());
+  mediaPlayer.play(AudioType.vlc, "song.vlc");
 }

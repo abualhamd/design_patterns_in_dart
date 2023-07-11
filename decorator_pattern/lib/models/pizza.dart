@@ -3,6 +3,18 @@ abstract class Pizza {
   double getCost();
 }
 
+class PizzaImpl implements Pizza {
+  @override
+  double getCost() {
+    return 3.50;
+  }
+
+  @override
+  String getDescription() {
+    return 'your favoirte pizza';
+  }
+}
+
 class PizzaDecorator implements Pizza {
   final Pizza _pizza;
   PizzaDecorator(this._pizza);
