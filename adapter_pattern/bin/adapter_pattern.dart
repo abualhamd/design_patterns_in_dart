@@ -7,4 +7,4 @@ void main() {
   mediaPlayer.pause("VLC", "media.Vlc");
   mediaPlayer.stop("VLC", "media.Vlc");
   mediaPlayer.rewind("VLC", "media.Vlc");
-}
+

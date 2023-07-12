@@ -8,8 +8,8 @@
 - [ ] Singleton
 
 ## Structural
-- [ ] Adapter
-- [ ] Decorator
+- [x] Adapter
+- [x] Decorator
 - [ ] Composite
 - [ ] Facade
 
