@@ -5,11 +5,11 @@ enum FurnitureType {
   modern,
   normal;
 
-  FurnitureFactory getFactory() {
-    return switch (this) {
-      victorian => VictorianFurnitureFactory(),
-      modern => ModernFurnitureFactory(),
-      normal => NormalFurnitureFactory(),
-    };
-  }
+  // FurnitureFactory getFactory() {
+  //   return switch (this) {
+  //     victorian => VictorianFurnitureFactory(),
+  //     modern => ModernFurnitureFactory(),
+  //     normal => NormalFurnitureFactory(),
+  //   };
+  // }
 }

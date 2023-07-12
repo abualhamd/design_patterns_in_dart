@@ -1,3 +1,4 @@
+
 // import 'package:adapter_pattern/adapter_pattern.dart';
 // import 'package:test/test.dart';
 
@@ -6,3 +7,4 @@
 //     expect(calculate(), 42);
 //   });
 // }
+
