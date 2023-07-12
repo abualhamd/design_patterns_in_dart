@@ -1,20 +1,21 @@
 
+import 'package:observer_pattern/courses.dart';
+import 'package:observer_pattern/students.dart';
 
-import 'package:observer_pattern/binary_observer.dart';
-import 'package:observer_pattern/hexdecimal_observer.dart';
-import 'package:observer_pattern/observer_pattern.dart';
-import 'package:observer_pattern/octal_observer.dart';
+void main(){
+  
+  Course flutter = Course("Flutter");
+  Students ahmed = Students("Ahmed");
+  Students mohamjed = Students("Mohamjed");
+  Students ali = Students("Ali");
+  Students omar = Students("Omar");
 
-void main() {
-  Subject subject = Subject();
+flutter.subscribe(ahmed);
+flutter.subscribe(mohamjed);
+flutter.subscribe(omar);
+flutter.subscribe(ali);
 
-  HexDecimalObserver(subject);
-  OctalObserver(subject);
-  BinaryObserver(subject);
+flutter.unsubscribe(ali);
 
-  print("First state change: 15");
-  subject.setState(15);
-  print("Second state change: 10");
-  subject.setState(10);
+flutter.isAvaliable(true);
 }
-
