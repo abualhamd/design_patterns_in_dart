@@ -1,4 +1,4 @@
-// import 'package:composite_pattern/composite_pattern.dart';
+// import 'package:observer_pattern/observer_pattern.dart';
 // import 'package:test/test.dart';
 
 // void main() {

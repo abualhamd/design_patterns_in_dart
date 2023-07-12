@@ -10,10 +10,10 @@
 ## Structural
 - [x] Adapter
 - [x] Decorator
-- [ ] Composite
+- [x] Composite
 - [ ] Facade
 
 
 ## Behavioural
-- [ ] Observer
+- [x] Observer
 - [ ] Mediator

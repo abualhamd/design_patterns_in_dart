@@ -15,7 +15,7 @@ class PizzaImpl implements Pizza {
   }
 }
 
-class PizzaDecorator implements Pizza {
+abstract class PizzaDecorator implements Pizza {
   final Pizza _pizza;
   PizzaDecorator(this._pizza);
   @override
