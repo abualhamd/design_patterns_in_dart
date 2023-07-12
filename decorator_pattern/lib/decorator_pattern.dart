@@ -1,15 +1,14 @@
 // Base interface for the component
-abstract class Component {
-  void operation();
-}
+ class Component {
+ void operation() {
+    print('Executing operation in ConcreteComponent');
+  }}
 
 // Concrete component
-class ConcreteComponent implements Component {
-  @override
-  void operation() {
-    print('Executing operation in ConcreteComponent');
-  }
-}
+// class ConcreteComponent implements Component {
+//   @override
+ 
+// }
 
 // Decorator
 abstract class Decorator implements Component {
@@ -17,6 +16,7 @@ abstract class Decorator implements Component {
 
   Decorator(this.component);
 
+// my conflict is here
   @override
   void operation() {
     component.operation();

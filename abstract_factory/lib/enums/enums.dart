@@ -1,4 +1,3 @@
-import '../factories/furniture_factory.dart';
 
 enum FurnitureType {
   victorian,

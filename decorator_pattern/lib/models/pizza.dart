@@ -20,12 +20,12 @@ class PizzaDecorator implements Pizza {
   PizzaDecorator(this._pizza);
   @override
   double getCost() {
-    return _pizza.getCost();
+    return _pizza.getCost(); //3.5
   }
 
   @override
   String getDescription() {
-    return _pizza.getDescription();
+    return _pizza.getDescription(); //your favoirte pizza';
   }
 }
 
@@ -34,12 +34,12 @@ class CheesePizzaDecorator extends PizzaDecorator {
 
   @override
   double getCost() {
-    return super.getCost() + 1.5;
+    return super.getCost() + 1.5;// 3.5 + 1.5
   }
 
   @override
   String getDescription() {
-    return '${super.getDescription()} Extra cheese';
+    return '${super.getDescription()} Extra cheese';//your favoirte pizza' + 'Extra cheese'
   }
 }
 
