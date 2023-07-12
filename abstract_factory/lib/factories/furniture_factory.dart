@@ -1,9 +1,18 @@
+import 'package:abstract_factory/enums/enums.dart';
 import 'package:abstract_factory/models/chair.dart';
 import 'package:abstract_factory/models/couch.dart';
 
 abstract class FurnitureFactory {
   Chair createChair();
   Couch createCouch();
+
+  factory FurnitureFactory(FurnitureType type) {
+    return switch (type) {
+      FurnitureType.normal => NormalFurnitureFactory(),
+      FurnitureType.victorian => VictorianFurnitureFactory(),
+      FurnitureType.modern => ModernFurnitureFactory(),
+    };
+  }
 }
 
 class ModernFurnitureFactory implements FurnitureFactory {

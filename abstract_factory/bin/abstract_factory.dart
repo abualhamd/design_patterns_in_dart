@@ -8,7 +8,7 @@ void main() {
 
   if (choice > 0 && choice <= FurnitureType.values.length) {
     FurnitureFactory furnFactory =
-        FurnitureType.values[choice - 1].getFactory();
+        FurnitureFactory(FurnitureType.values[choice-1]); 
 
     furnFactory.createChair().sitOn();
   } else {
