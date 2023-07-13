@@ -2,7 +2,7 @@ import 'package:observer_pattern/observer.dart';
 import 'package:observer_pattern/subjects.dart';
 
 class Course implements Subject {
-  String _name;
+  final String _name;
   late String availabe;
    List<Observer> observers = [];
 
